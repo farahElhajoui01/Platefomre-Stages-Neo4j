@@ -1,0 +1,19 @@
+﻿[{
+  
+  "ID": "e6",
+  "raisonSociale": "THALES INFORMATIQUE\n",
+  "adresseEmail": "THALES@thales.com",
+  "tel": "+212 661444677",
+  "adresse": "Casablanca",
+  "like":0,
+  "dislike":0
+},{
+  
+  "ID": "e7",
+  "raisonSociale": "Smart Strategies",
+  "adresseEmail": "SMART@smart.com",
+  "tel": "+212 661404697",
+  "adresse": "Casablanca",
+  "like":0,
+  "dislike":0
+}]

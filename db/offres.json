@@ -1,0 +1,66 @@
+﻿[{
+  "_id": {
+    "$oid": "5fb556c51d1edc4e486670dd"
+  },
+  "date": "25-12-2020",
+  "image": "images/offres/image1.jpg",
+  "utilisateur": {
+    "nom": "nom1",
+    "prenom": "prenom1"
+  }
+},{
+  "_id": {
+    "$oid": "5fb556c51d1edc4e486670de"
+  },
+  "date": "25-12-2020",
+  "utilisateur": {
+    "nom": "nom2",
+    "prenom": "prenom1"
+  }
+},{
+  "_id": {
+    "$oid": "5fb556c51d1edc4e486670df"
+  },
+  "date": "25-12-2020",
+  "image": "images/offres/image2.jpg",
+  "utilisateur": {
+    "nom": "nom3",
+    "prenom": "prenom1"
+  }
+},{
+  "_id": {
+    "$oid": "5fb556c51d1edc4e486670e0"
+  },
+  "date": "12-11-2020",
+  "utilisateur": {
+    "nom": "nom4",
+    "prenom": "prenom1"
+  }
+},{
+  "_id": {
+    "$oid": "5fb556c51d1edc4e486670e1"
+  },
+  "date": "12-11-2020",
+  "utilisateur": {
+    "nom": "nom4",
+    "prenom": "prenom1"
+  }
+},{
+  "_id": {
+    "$oid": "5fb591a9f32d0000880029ef"
+  },
+  "date": "18-11-2020",
+  "utilisateur": {
+    "prenom": "nom5",
+    "nom": "prenom5"
+  }
+},{
+  "_id": {
+    "$oid": "5fb64893f32d0000880029f4"
+  },
+  "date": "19-11-2020",
+  "utilisateur": {
+    "prenom": "nom5",
+    "nom": "prenom5"
+  }
+}]

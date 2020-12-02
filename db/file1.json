@@ -1,0 +1,90 @@
+﻿{
+  "utilisateurs": {
+    "utilisateur": [
+      {
+        
+        "ID": 8,
+        "type": "lauréat",
+        "nom": "EL MAALIKI",
+        "prenom": "Meriem",
+        "adresseEmail": "s@g.com",
+        "photo": "images/users/users_photo11.jpg",
+        "titre": "etudiant",
+        "login": "etudiant",
+        "motDePasse": "kkk",
+        "tel": "0650203070",
+        "adresse": "Ennakhil,Marrakech",
+        "profession": [
+          {
+            "entreprise": {
+              "ID": "e6",
+              "raisonSociale": "Smart Strategies",
+              "adresseEmail": "SMART@smart.com",
+              "tel": "+212 661404697",
+              "adresse": "Casablanca,MA"
+            },
+            "Id": 1,
+            "titre": "fullstack develloper ",
+            "dateDebut": "12-03-2020",
+            "dateFin": "12-05-2020"
+          },
+          {
+            "Id": 2,
+            "titre": "fullstack develloper ",
+            "dateDebut": "12-03-2020",
+            "dateFin": "12-05-2020",
+            "entreprise": {
+              "ID": "e3",
+              "raisonSociale": "Logigroup",
+              "tel": "+212 661404656",
+              "adresse": "Casablanca",
+              "adresseEmail": "admin@admin.com"
+            }
+          }
+        ],
+        "stage": [
+          {
+            "Id": 1,
+            "titre": "stage 1",
+            "entreprise": {
+              "ID": "e3",
+              "raisonSociale": "Logigroup",
+              "tel": "+212 661404656",
+              "adresse": "Casablanca",
+              "adresseEmail": "admin@admin.com"
+            },
+            "sujet": "conception et réalisation d'un site web",
+            "dateDebut": "12-03-2020",
+            "dateFin": "12-05-2020",
+            "description": "description1"
+          },
+          {
+            "Id": 2,
+            "titre": "stage2",
+            "entreprise": {
+              "ID": "e3",
+              "raisonSociale": "Logigroup",
+              "tel": "+212 661404656",
+              "adresse": "Casablanca",
+              "adresseEmail": "admin@admin.com"
+            },
+            "adresseEmail": "admin@admin.com",
+            "sujet": "conception et réalisation d'un site web",
+            "dateDebut": "12-03-2020",
+            "dateFin": "12-05-2020",
+            "description": "description 2"
+          }
+        ]
+      },
+      {
+        "ID": "e6",
+        "raisonSociale": "Smart Strategies",
+        "adresseEmail": "SMART@smart.com",
+        "tel": "+212 661404697",
+        "adresse": "Casablanca",
+        "like": 0,
+        "dislike": 0
+      }
+    ]
+  }
+}

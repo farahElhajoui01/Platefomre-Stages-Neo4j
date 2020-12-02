@@ -1,0 +1,48 @@
+
+[
+{
+  "ID": 8,
+  "type": "lauréat",
+  "nom": "EL MAALIKI",
+  "prenom": "Meriem",
+  "adresseEmail": "s@g.com",
+  "photo": "images/users/users_photo11.jpg",
+  "titre": "etudiant",
+  "login": "etudiant",
+  "motDePasse": "kkk",
+  "tel": "0650203070",
+  "adresse": "Ennakhil,Marrakech",
+  "profession": [
+    {
+      "Id": 1,
+      "titre": "fullstack develloper ",
+      "dateDebut": "12-03-2020",
+      "dateFin": "12-05-2020"
+    },
+    {
+      "Id": 2,
+      "titre": "fullstack develloper ",
+      "dateDebut": "12-03-2020",
+      "dateFin": "12-05-2020"
+    }
+  ],
+  "stage": [
+    {
+      "Id": 1,
+      "titre": "stage 1",
+      "sujet": "conception et réalisation d'un site web",
+      "dateDebut": "12-03-2020",
+      "dateFin": "12-05-2020",
+      "description": "description1"
+    },
+    {
+      "Id": 2,
+      "titre": "stage2",
+      "sujet": "conception et réalisation d'un site web",
+      "dateDebut": "12-03-2020",
+      "dateFin": "12-05-2020",
+      "description": "description 2"
+    }
+  ]
+}
+]
