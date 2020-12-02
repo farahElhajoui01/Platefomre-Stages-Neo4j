@@ -1,4 +1,9 @@
 <?php
+use Neoxygen\NeoClient\ClientBuilder;
+
+$client = ClientBuilder::create()
+  ->addConnection('default', 'http', 'localhost', 7474)
+  ->build();
 ?>
 
 <!DOCTYPE html>
