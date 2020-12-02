@@ -119,10 +119,6 @@
             }
         ],
         "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-        "support": {
-            "issues": "https://github.com/composer/package-versions-deprecated/issues",
-            "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
-        },
         "funding": [
             {
                 "url": "https://packagist.com",
@@ -592,11 +588,7 @@
             "package",
             "release",
             "versions"
-        ],
-        "support": {
-            "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-            "source": "https://github.com/Jean85/pretty-package-versions/tree/1.5.1"
-        }
+        ]
     },
     {
         "name": "mongodb/mongodb",
@@ -663,11 +655,7 @@
             "driver",
             "mongodb",
             "persistence"
-        ],
-        "support": {
-            "issues": "https://github.com/mongodb/mongo-php-library/issues",
-            "source": "https://github.com/mongodb/mongo-php-library/tree/1.7.2"
-        }
+        ]
     },
     {
         "name": "monolog/monolog",

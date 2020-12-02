@@ -1,4 +1,4 @@
 <?php
-require __DIR__ . '/connection.php';
+//require __DIR__ . '/connection.php';
 
-$result = $db->offres->find();
+//$result = $db->offres->find();

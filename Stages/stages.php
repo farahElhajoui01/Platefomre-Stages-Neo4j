@@ -3,9 +3,24 @@ require_once '../vendor/autoload.php';
 
 use GraphAware\Neo4j\Client\ClientBuilder;
 
+
 $client = ClientBuilder::create()
-    ->addConnection('default', 'http://neo4j:stage@localhost:7678') // Example for HTTP connection configuration (port is optional)
+    ->addConnection('http', 'http://neo4j:slice-suppression-illustrations@54.87.207.158:32835')
     ->build();
+
+
+    $query = "Match (e:Entreprise)<-[:esteffectuedans]-(s:Stage)<-[c:commenter]-(u:Utilisateur)
+    RETURN u.nom,s.sujet,c.commentaire,e.raisonSociale,e.tel,e.adresseEmail";
+   
+
+   
+
+        $result = $client->run($query);
+        $record=$result->getRecords();
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -275,7 +290,7 @@ $client = ClientBuilder::create()
                                 </div>
                                 <!-- sidebar -->
                                 <div class="col-lg-8" style="background-color:white;padding:0px;">
-                                <table class="table">
+  <table class="table">
   <thead class="bg-primary" style="color:white;">
     <tr>
       <th scope="col">Lauréat</th>
@@ -285,24 +300,25 @@ $client = ClientBuilder::create()
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  <?php
+
+foreach ($result->getRecords() as $record) {
+    echo ' <tr>
+    <td>'.$record->value("u.nom").'</td>
+    <td>'.$record->value("e.raisonSociale").'</br>'.$record->value("e.tel").'</br>'.$record->value("e.adresseEmail").'</td>
+    <td>'.$record->value("s.sujet").'</td>
+    <td>'.$record->value("c.commentaire").'</td>
+
+  </tr>';
+
+}
+
+
+
+
+  ?>
+   
+   
   </tbody>
 </table>
                                                 </div>

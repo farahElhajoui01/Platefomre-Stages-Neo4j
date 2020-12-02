@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdc1878bbbf77c9f9dde3e178576098f",
+    "content-hash": "ec300be93906822127f7647e217c356d",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -121,10 +121,6 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "support": {
-                "issues": "https://github.com/composer/package-versions-deprecated/issues",
-                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
-            },
             "funding": [
                 {
                     "url": "https://packagist.com",
@@ -579,10 +575,6 @@
                 "release",
                 "versions"
             ],
-            "support": {
-                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/1.5.1"
-            },
             "time": "2020-09-14T08:43:34+00:00"
         },
         {
@@ -648,10 +640,6 @@
                 "mongodb",
                 "persistence"
             ],
-            "support": {
-                "issues": "https://github.com/mongodb/mongo-php-library/issues",
-                "source": "https://github.com/mongodb/mongo-php-library/tree/1.7.2"
-            },
             "time": "2020-10-08T10:06:19+00:00"
         },
         {

@@ -1,125 +1,3 @@
-<?php
-
-try {
-
-    $mng = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-
-    $query = new MongoDB\Driver\Query(array('ID' => 8));
-
-    $res = $mng->executeQuery("Stages_db.utilisateurs", $query);
-    $utilisateur = iterator_to_array($res);
-
-    $stages = array($utilisateur[0]->stage);
-    $stages_var = $stages[0];
-
-    $count_s = 0;
-    $count_p = 0;
-
-    $professions = array($utilisateur[0]->profession);
-    $professions_var = $professions[0];
-
-} catch (MongoDB\Driver\Exception\Exception $e) {
-
-    $filename = basename(__FILE__);
-
-    echo "The $filename script has experienced an error.\n";
-    echo "It failed with the following exception:\n";
-
-    echo "Exception:", $e->getMessage(), "\n";
-    echo "In file:", $e->getFile(), "\n";
-    echo "On line:", $e->getLine(), "\n";
-}
-
-/*
-
-//extration des données
-$données=simplexml_load_file('db/file1.xml');
-$utilisateur=$données->xpath("//utilisateur[@ID='1']");
-$stages = $données->xpath("//utilisateur[@ID='1']/stage");
-$professions = $données->xpath("//utilisateur[@ID='1']/profession");
-
-//suppression de profession par ID
-
-function removeprofession($id_exp) {
-echo $id_exp.'heeeeeeey';
-
-$dom = new DOMDocument();
-$dom->formatOutput = true;
-$dom->preserveWhiteSpace = false;
-$dom->load("db/file1.xml");
-$xpath = new DOMXPath($dom);
-$query = "//utilisateur[@ID='1']/profession[@ID='".$id_exp."']";
-
-$nodes = $xpath->query($query);
-$node = $nodes[0];
-$node->parentNode->removeChild($node);
-$dom->save("db/file1.xml", LIBXML_NOEMPTYTAG);
-
-header("Refresh: '1';url='profil.php'");
-}
-//suppression de stage par ID
-function removestage($id_exp) {
-//echo $id_exp;
-
-$dom = new DOMDocument();
-$dom->formatOutput = true;
-$dom->preserveWhiteSpace = false;
-$dom->load("db/file1.xml");
-$xpath = new DOMXPath($dom);
-$query = "//utilisateur[@ID='1']/stage[@ID='".$id_exp."']";
-$nodes = $xpath->query($query);
-$node = $nodes[0];
-$node->parentNode->removeChild($node);
-$dom->save("db/file1.xml", LIBXML_NOEMPTYTAG);
-
-header("Refresh: '1';url='profil.php'");
-}
-
-if (isset($_GET['removep'])) {
-
-return removeprofession($_GET['removep']);
-}
-
-if (isset($_GET['removes'])) {
-
-return removestage($_GET['removes']);
-
-}
-
-//enregistrer l'image choisie dans le repertoire
-
-if (isset($_FILES['imageprofil'])) {
-
-$uploaddir = 'images/users/users_';
-$uploadfile = $uploaddir . basename($_FILES['imageprofil']['name']);
-$dom = new DOMDocument();
-$dom->formatOutput = true;
-$dom->preserveWhiteSpace = false;
-$dom->load("db/file1.xml");
-$xpath = new DOMXPath($dom);
-$query = "//utilisateur[@ID='1']/photo";
-$nodes = $xpath->query($query);
-for($i = 0; $i < $nodes->length; $i++) {
-
-$nodes->item($i)->nodeValue = $uploaddir . basename($_FILES['imageprofil']['name']);;
-
-}
-$dom->save("db/file1.xml", LIBXML_NOEMPTYTAG);
-if (move_uploaded_file($_FILES['imageprofil']['tmp_name'], $uploadfile)) {
-// echo "File is valid, and was successfully uploaded.\n";
-} else {
-echo "Upload failed";
-}
-
-}
-
-//modifier le chemin de la photo
-
- */
-?>
-
-
-
 
 
 <!DOCTYPE html>
@@ -141,19 +19,7 @@ echo "Upload failed";
 </head>
 
 <body>
-    <!--<div class="se-pre-con"></div>-->
-    <script>
-    async function removeprofession(e, id_exp) {
-        e.preventDefault();
-        document.body.innerHTML += '<br>' + await (await fetch('?removep=' + id_exp)).text();
 
-
-    }
-    async function removestage(e, id_exp) {
-        e.preventDefault();
-        document.body.innerHTML += '<br>' + await (await fetch('?removes=' + id_exp)).text();
-    }
-    </script>
     <div class="theme-layout">
 
         <div class="responsive-header">
@@ -355,17 +221,14 @@ echo "Upload failed";
                                 <ul>
                                     <li class="admin-name">
 
-                                        <?php foreach ($utilisateur as $u) {?>
-                                        <a title="" href="#"></a>
-                                        <h5><?php echo $u->prenom ?> <?php echo $u->nom ?></h5>
-                                        <?php }?>
+
 
                                     </li>
                                     <li class="admin-name" style="margin-left:30%;">
 
-                                        <?php foreach ($utilisateur as $u) {?>
+                                       aaa
                                         <a title="" href="#"></a>
-                                        <h5><?php echo $u->titre ?> </h5> <?php }?>
+                                        <h5>aa </h5>
                                     </li>
 
                                 </ul>
@@ -390,26 +253,26 @@ echo "Upload failed";
                                             <ul class="naves" style="padding:3%">
                                                 <li>
                                                     <i class="ti-email"></i>
-                                                    <?php foreach ($utilisateur as $u) {?>
-                                                    <a title="" href="#"><?php echo $u->adresseEmail ?></a>
 
-                                                    <?php }?>
+                                                    <a title="" href="#">aa</a>
+
+
                                                 </li>
 
                                                 <li>
                                                     <i class="ti-mobile"></i>
-                                                    <?php foreach ($utilisateur as $u) {?>
-                                                    <a title="" href="#"><?php echo $u->tel ?></a>
 
-                                                    <?php }?>
+                                                    <a title="" href="#">aa</a>
+
+
                                                 </li>
 
                                                 <li>
                                                     <i class="ti-map-alt"></i>
-                                                    <?php foreach ($utilisateur as $u) {?>
-                                                    <a title="" href="#"><?php echo $u->adresse ?></a>
 
-                                                    <?php }?>
+                                                    <a title="" href="#">aa</a>
+
+
                                                 </li>
 
 
@@ -427,108 +290,46 @@ echo "Upload failed";
                                             <div class="notification-box">
                                                 <ul>
 
-                                                    <?php
-if (is_array($stages_var )) {
-    $count = sizeof($stages_var);
-} else {
-    $count = 0;
-}
 
-for ($i = 0; $i < 2; $i++) {
-
-    if ($count > 1) {
-
-        $stage = json_decode(json_encode($stages_var[$i], true));
-
-    } else {
-
-        $stage = json_decode(json_encode($stages_var, true));
-
-    }
-    $titre = $stage->titre;
-    $dated = $stage->dateDebut;
-    $datef = $stage->dateFin;
-    $sujet = $stage->sujet;
-    $description = $stage->description;
-    $raisonSociale="";
-
-
-    if(isset($stage->entreprise)){
-    $entreprise=$stage->entreprise;
-    $raisonSociale=$entreprise->raisonSociale ;}
-
-    ?>
 
                                                     <li>
                                                         <figure><img src="images/resources/internship.png"
                                                                 style="width:40px" alt=""></figure>
                                                         <div class="notifi-meta">
-                                                         <b>   <p><?php echo $titre." , ".$raisonSociale ?></p></b>
-                                                            <span><?php echo $dated ?> jusqu'à
-                                                                <?php echo $datef ?></span>
-                                                            <p><?php echo $sujet ?></p>
-                                                            <p><?php echo $description ?></p>
+                                                         <b>   <p>aaa</p></b>
+                                                            <span>aaa jusqu'à
+                                                               aa</span>
+                                                            <p>aaa</p>
+                                                            <p>aaa</p>
                                                         </div>
                                                         <a href=""
-                                                            onclick="removestage(event,<?php echo $stages[0]['ID'] ?>)"
+                                                            onclick=""
                                                             class="deletebtn"><i class="del fa fa-close "
                                                                 id="deleteitems"></i></a>
                                                     </li>
-                                                    <?php }
-
-?>
-
-                                                    <?php
-if (is_array($professions_var)) {
-    $count = sizeof($professions_var);
-} else {
-    $count = 0;
-}
-
-for ($i = 0; $i < 2; $i++) {
-
-    if ($count > 1) {
-
-        $profession = json_decode(json_encode($professions_var[$i], true));
-
-    } else {
-
-        $profession = json_decode(json_encode($professions_var, true));
-
-    }
-    $titre = $profession->titre;
-    $dated = $profession->dateDebut;
-    $datef = $profession->dateFin;
-    $raisonSociale="";
 
 
-    if(isset($profession->entreprise)){
-    $entreprise=$profession->entreprise;
-    $raisonSociale=$entreprise->raisonSociale ;}
-    
-    
 
 
-    ?>
+
+
                                                     <li>
                                                         <figure><img src="images/resources/job.png" style="width:40px"
                                                                 alt=""></figure>
                                                         <div class="notifi-meta">
-                                                           <b> <p><?php echo $titre." , ".$raisonSociale ?> </p></b>
-                                                            <span><?php echo $dated ?> jusqu'à
-                                                                <?php echo $datef ?></span>
+                                                           <b> <p>aaa </p></b>
+                                                            <span>aaa jusqu'à
+                                                               aaa</span>
 
                                                         </div>
                                                         <a href=""
-                                                            onclick="removeprofession(event,<?php echo $professions[0]['ID'] ?>)"
+                                                            onclick=""
                                                             class="deletebtn"><i class="del fa fa-close "
                                                                 id="deleteitems"></i></a>
 
 
                                                     </li>
-                                                    <?php }
 
-?>
 
 
 

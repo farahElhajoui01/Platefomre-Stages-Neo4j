@@ -1,7 +1,4 @@
-<?php
-session_start();
-require __DIR__ . '/findOffres.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -306,11 +303,7 @@ require __DIR__ . '/findOffres.php';
                                         </div>
                                     </div>
 
-                                    <?php
 
-foreach ($result as $el) {
-    $nom = $el->utilisateur['nom'];
-    ?>
                                     <div class="central-meta item">
                                         <div class="user-post">
                                             <div class="friend-info">
@@ -318,21 +311,14 @@ foreach ($result as $el) {
                                                     <img src="images/users/users_farah.jpeg" alt="" />
                                                 </figure>
                                                 <div class="friend-name">
-                                                    <ins><a href="time-line.html" title=""><?php echo $nom; ?></a></ins>
-                                                    <span>published: <?php echo $el['date']; ?></span>
+                                                    <ins><a href="time-line.html" title="">aaa</a></ins>
+                                                    <span>published: aaa</span>
                                                 </div>
                                                 <div class="post-meta">
-                                                    <?php
-if (!empty($el['image'])) {
-        echo '<img src="' . $el['image'] . '" alt="" />';
-    } else {
-        # code...
 
-        echo '<div class="description">
-                                                            <p>' . $el['description'] . '</p>
-                                                        </div>';
-    }
-    ?>
+                                                            <p>aa</p>
+                                                        </div>'
+
                                                     <div class="we-video-info">
                                                         <ul>
                                                             <li>
@@ -422,11 +408,8 @@ if (!empty($el['image'])) {
                                             </div>
 
                                         </div>
-                                    </div> <?php
+                                    </div>
 
-}
-
-?>
                                 </div>
                             </div>
                             <!-- centerl meta -->
@@ -440,24 +423,8 @@ if (!empty($el['image'])) {
 
     </div>
 
-    <script>
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            document.getElementById('sp').style.display = 'block';
 
-            var reader = new FileReader();
-            var el = document.getElementById("myDIV");
 
-            reader.onload = function(e) {
-                $('#blah').attr('src', e.target.result);
-            }
-
-            reader.readAsDataURL(input.files[0]);
-            el.style.display = "none";
-
-        }
-    }
-    </script>
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/script.js"></script>

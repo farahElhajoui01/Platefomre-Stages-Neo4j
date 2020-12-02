@@ -70,7 +70,7 @@ final class Versions
   'symfony/polyfill-php73' => 'v1.20.0@8ff431c517be11c78c48a39a66d37431e26a6bed',
   'symfony/polyfill-php80' => 'v1.20.0@e70aa8b064c5b72d3df2abd5ab1e90464ad009de',
   'symfony/yaml' => 'v2.8.52@02c1859112aa779d9ab394ae4f3381911d84052b',
-  '__root__' => 'dev-master@07cfd4b7d2f5f3b5abd88fa6bb0cac1f88fb56a2',
+  '__root__' => 'dev-master@0c9061b2f63f4a3492adc97f79718190e5859670',
 );
 
     private function __construct()
