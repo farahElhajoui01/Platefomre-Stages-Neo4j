@@ -1,7 +1,4 @@
-<?php
-session_start();
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -271,20 +268,6 @@ session_start();
 
         <section>
             <div class="gap gray-bg">
-                <?php
-if (isset($_SESSION['success-insert'])) {
-    echo "<div class='alert alert-success'>" . $_SESSION['success-insert'] . "</div>";
-    unset($_SESSION["success-insert"]);
-} elseif (isset($_SESSION['success-update'])) {
-    echo "<div class='alert alert-warning'>" . $_SESSION['success-update'] . "</div>";
-    unset($_SESSION["success-update"]);
-} elseif (isset($_SESSION['success-delete'])) {
-    echo "<div class='alert alert-danger'>" . $_SESSION['success-delete'] . "</div>";
-    unset($_SESSION["success-delete"]);
-}
-?>
-
-
 
 
                 <div class="container-fluid">
@@ -361,31 +344,7 @@ if (isset($_SESSION['success-insert'])) {
 
                                                             </div>
                                                             <div class="row">
-                                                                <?php
 
-require '../connection.php';
-$entreprisess = $db->entreprises->find([]);
-
-foreach ($entreprisess as $entreprise) {
-    $raisonSociale = $entreprise->raisonSociale;
-    $adresseEmail = $entreprise->adresseEmail;
-    $id=$entreprise->ID;
-    $likes=$entreprise->like;
-    $dislikes=$entreprise->dislike;
-
-
-    if (isset($entreprise->tel)) {
-        $tel = $entreprise->tel;
-    } else {
-        $tel = 'Non precise';
-    }
-    if (isset($entreprise->adresse)) {
-        $adresse = $entreprise->adresse;
-    } else {
-        $tel = 'Non precise';
-    }
-
-    ?>
 
                                                                 <div class="col-md-5">
                                                                     <div class="open-position">
@@ -393,32 +352,32 @@ foreach ($entreprisess as $entreprise) {
                                                                         <div class="col-md-7">
 
                                                                         <h5>
-                                                                            <a href="#" title=""><?php echo $raisonSociale; ?></a>
+                                                                            <a href="#" title="">aaa</a>
                                                                         </h5>
                                                                         </div>
                                                                         <div class="col-md-5" style="color:#C8C8C8">
                                                                         <i
-                                                                          class="fa fa-thumbs-up ib"><?php echo $likes; ?></i>
+                                                                          class="fa fa-thumbs-up ib">aaa</i>
                                                                                 <i
-                                                                                class="fa fa-thumbs-down ib"><?php echo $dislikes; ?></i>
+                                                                                class="fa fa-thumbs-down ib">aaa</i>
                                                                          </div>
 
                                                                          </div>
                                                                         <a href="#" title=""><i
-                                                                                class="fa fa-phone"></i><?php echo $tel; ?></a>
+                                                                                class="fa fa-phone"></i>aaa</a>
                                                                         <br>
                                                                         <a href="#" title=""><i
-                                                                                class="fa fa-envelope"></i><?php echo $adresseEmail; ?></a>
+                                                                                class="fa fa-envelope"></i>aaa</a>
                                                                         <br>
                                                                         <a href="#" title=""><i
-                                                                                class="fa fa-map-marker"></i><?php echo $adresse; ?></a>
+                                                                                class="fa fa-map-marker"></i>aaa</a>
 
 
                                                                         <div class="text-center card-buttons">
                                                                             <a href="#"
                                                                                 class="btn btn-warning a-btn-slide-text ti-pencil-alt"
                                                                                 style="color:white;" data-toggle="modal"
-                                                                                data-target="#<?php echo $raisonSociale; ?>">
+                                                                                data-target="#aaa">
 
 
                                                                             </a>
@@ -426,14 +385,14 @@ foreach ($entreprisess as $entreprise) {
                                                                             <a href="#"
                                                                                 class="btn btn-danger a-btn-slide-text ti-trash"
                                                                                 data-toggle="modal"
-                                                                                data-target="#<?php echo $adresseEmail; ?>">
+                                                                                data-target="#aaa">
 
 
                                                                             </a>
                                                                             <a href="#"
                                                                                class="btn btn-success a-btn-slide-text "
                                                                                data-toggle="modal"
-                                                                               data-target="#<?php echo $adresseEmail; ?>">
+                                                                               data-target="#aaa">
                                                                                Noter
 
                                                                             </a>
@@ -444,10 +403,10 @@ foreach ($entreprisess as $entreprise) {
                                                                                 <form  action="like.php" method="POST">
                                                                                     <input name="id"
                                                                                         type="hidden"
-                                                                                        value="<?php echo $id; ?>">
+                                                                                        value="aaa">
                                                                                         <input name="like"
                                                                                         type="hidden"
-                                                                                        value="<?php echo $likes; ?>">
+                                                                                        value="aaa">
 
 
                                                                                         <button  type="submit" name="liker" 
@@ -460,11 +419,11 @@ foreach ($entreprisess as $entreprise) {
                                                                                   
                                                                                   <input name="id"
                                                                                         type="hidden"
-                                                                                        value="<?php echo $id; ?>"/>
+                                                                                        value="aaa"/>
                                                                                        
                                                                                         <input name="dislike"
                                                                                         type="hidden"
-                                                                                        value="<?php echo $dislikes; ?>" />
+                                                                                        value="aaa" />
                                                                                 <button type="submit"
                                                                                         class="btn  " style="width:100px;background-color: #4169E1;padding:3px;margin-left:8%;font-size:14px;color:white"
                                                                                         name="disliker"><i
@@ -477,7 +436,7 @@ foreach ($entreprisess as $entreprise) {
 
 
                                                                         <!-- Modal -->
-                                                                        <div class="modal fade" id="<?php echo $adresseEmail; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal fade" id="aaa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                             <div class="modal-dialog" role="document">
                                                                                 <div class="modal-content">
                                                                                     <div class="modal-header">
@@ -510,7 +469,7 @@ foreach ($entreprisess as $entreprise) {
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal fade"
-                                                                    id="<?php echo $raisonSociale; ?>" tabindex="-1"
+                                                                    id="aaa" tabindex="-1"
                                                                     role="dialog" aria-labelledby="exampleModalLabel"
                                                                     aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
@@ -518,7 +477,7 @@ foreach ($entreprisess as $entreprise) {
                                                                             <div class="modal-header">
                                                                                 <h5 class="modal-title"
                                                                                     id="exampleModalLabel">
-                                                                                    <?php echo $raisonSociale; ?></h5>
+                                                                                    aaa</h5>
                                                                                 <button type="button" class="close"
                                                                                     data-dismiss="modal"
                                                                                     aria-label="Close">
@@ -535,7 +494,7 @@ foreach ($entreprisess as $entreprise) {
                                                                                             sociale</label>
                                                                                         <input type="text"
                                                                                             class="form-control" style="border: 1px solid black;  box-shadow: 0 0 0 1px #4dd0e1;
-" name="raisonSociale" required value="<?php echo $raisonSociale; ?>">
+" name="raisonSociale" required value="aaa">
 
                                                                                     </div>
                                                                                     <div class="form-group">
@@ -543,7 +502,7 @@ foreach ($entreprisess as $entreprise) {
                                                                                             for="exampleInputPassword1">Email</label>
                                                                                         <input type="text"
                                                                                             class="form-control" style="border: 1px solid #4dd0e1;  box-shadow: 0 0 0 1px #4dd0e1;
-" name="adresseEmail" required value="<?php echo $adresseEmail; ?>">
+" name="adresseEmail" required value="aaa">
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label
@@ -551,14 +510,14 @@ foreach ($entreprisess as $entreprise) {
                                                                                             de telephone :</label>
                                                                                         <input type="text"
                                                                                             class="form-control" style="border: 1px solid #4dd0e1;  box-shadow: 0 0 0 1px #4dd0e1;
-" name="tel" value="<?php echo $tel; ?>">
+" name="tel" value="aaa">
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label
                                                                                             for="exampleInputPassword1">adresse</label>
                                                                                         <input type="text"
                                                                                             class="form-control" style="border: 1px solid #4dd0e1;  box-shadow: 0 0 0 1px #4dd0e1;
-" name="adresse" value="<?php echo $adresse; ?>">
+" name="adresse" value="aaa">
                                                                                     </div>
                                                                                     <input name="rs-hidden"
                                                                                         type="hidden"
@@ -577,7 +536,7 @@ foreach ($entreprisess as $entreprise) {
                                                                 </div>
 
                                                                 <div class="modal fade"
-                                                                    id="<?php echo $adresseEmail; ?>" tabindex="-1"
+                                                                    id="aaa" tabindex="-1"
                                                                     role="dialog" aria-labelledby="exampleModalLabel"
                                                                     aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
@@ -585,7 +544,7 @@ foreach ($entreprisess as $entreprise) {
                                                                             <div class="modal-header">
                                                                                 <h5 class="modal-title"
                                                                                     id="exampleModalLabel">Suppression
-                                                                                    de <?php echo $raisonSociale; ?>
+                                                                                    de aaa
                                                                                 </h5>
                                                                                 <button type="button" class="close"
                                                                                     data-dismiss="modal"
@@ -597,7 +556,7 @@ foreach ($entreprisess as $entreprise) {
                                                                             <div class="modal-body">
                                                                                 <p>Etes-vous sûr que vous voulez
                                                                                     supprimer
-                                                                                    "<?php echo $raisonSociale; ?>" </p>
+                                                                                    "aaa" </p>
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button"
@@ -606,7 +565,7 @@ foreach ($entreprisess as $entreprise) {
                                                                                 <form action="delete.php" method="post">
                                                                                     <input name="rs-hidden"
                                                                                         type="hidden"
-                                                                                        value="<?php echo $raisonSociale; ?>">
+                                                                                        value="aaa">
                                                                                     <button type="submit"
                                                                                         class="btn btn-danger "
                                                                                         name="delete">Supprimer</button>
@@ -618,11 +577,8 @@ foreach ($entreprisess as $entreprise) {
                                                                 </div>
 
 
-                                                                <?php
 
-}
 
-?>
                                                             </div>
                                                         </div>
                                                     </div>
