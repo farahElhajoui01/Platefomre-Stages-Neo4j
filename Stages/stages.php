@@ -11,6 +11,8 @@ $client = ClientBuilder::create()
 
     $query = "Match (e:Entreprise)<-[:esteffectuedans]-(s:Stage)<-[c:commenter]-(u:Utilisateur)
     RETURN u.nom,s.sujet,c.commentaire,e.raisonSociale,e.tel,e.adresseEmail";
+
+    
    
 
    
